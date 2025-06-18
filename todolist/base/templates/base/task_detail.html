@@ -1,0 +1,8 @@
+<h1>Task Details</h1>
+<div>
+    <h2>{{ task.title }}</h2>
+    <p><strong>Description:</strong> {{ task.description }}</p>
+    <p><strong>Status:</strong> {% if task.complete %}Completed{% else %}Pending{% endif %}</p>
+    <p><strong>Created:</strong> {{ task.createed }}</p>
+</div>
+<a href="{% url 'tasks' %}">Back to Task List</a>
