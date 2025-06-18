@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Create Task</title>
-</head>
-<body>
+{% extends 'base/main.html' %}
+
+{% block content %}
     <h1>Create New Task</h1>
     
     <form method="POST" action="">
-        {% csrf_token%}
+        {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Create Task">
     </form>
     <br>
     <a href="{% url "tasks" %}">Go Back</a>
-</body>
-</html>
+{% endblock content %}
